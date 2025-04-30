@@ -27,7 +27,8 @@ class CampaignController extends Controller
             'objective' => 'string',
             'key_message' => 'string',
             'sentiment' => 'string',
-            'account_id' => 'string'
+            'account_ids' => 'nullable|array',
+            'account_ids.*' => 'string'
         ]);
 
         $campaign = Campaign::create($validated);
@@ -75,7 +76,8 @@ class CampaignController extends Controller
             'objective' => 'sometimes|string',
             'key_message' => 'sometimes|string',
             'sentiment' => 'sometimes|string',
-            'account_id' => 'sometimes|string'
+            'account_ids' => 'sometimes|array',
+            'account_ids.*' => 'string'
         ]);
 
         $campaign->update($validated);

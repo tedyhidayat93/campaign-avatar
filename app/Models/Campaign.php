@@ -17,6 +17,10 @@ class Campaign extends Model
         'objective',
         'key_message',
         'sentiment',
-        'account_id',
+        'account_ids',
+    ];
+
+    protected $casts = [
+        'account_ids' => 'array',
     ];
 }
