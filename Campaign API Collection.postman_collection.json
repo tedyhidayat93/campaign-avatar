@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "22937ab9-950a-4c55-b1e6-440bbad95e7f",
+		"name": "Campaign API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39637502"
+	},
+	"item": [
+		{
+			"name": "Campaign Folders",
+			"item": [
+				{
+					"name": "List Campaign Folders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaign-folders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaign-folders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Campaign Folders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/campaign-folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"campaign-folders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 03:35:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"name\": \"New Sample Folder\",\n            \"description\": \"Description for sample folder\",\n            \"updated_at\": \"2025-04-30T03:34:35.177000Z\",\n            \"created_at\": \"2025-04-30T03:34:35.177000Z\",\n            \"id\": \"68119a4ba1a314c79a0effd2\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Campaign Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New Sample Folder\",\n  \"description\": \"Description for sample folder\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/campaign-folders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaign-folders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Campaign Folder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"New Sample Folder\",\n  \"description\": \"Description for sample folder\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/campaign-folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"campaign-folders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 03:34:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Campaign folder created successfully\",\n    \"data\": {\n        \"name\": \"New Sample Folder\",\n        \"description\": \"Description for sample folder\",\n        \"updated_at\": \"2025-04-30T03:34:35.177000Z\",\n        \"created_at\": \"2025-04-30T03:34:35.177000Z\",\n        \"id\": \"68119a4ba1a314c79a0effd2\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Campaign Folder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaign-folders/68119a4ba1a314c79a0effd2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaign-folders",
+								"68119a4ba1a314c79a0effd2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Campaign Folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/campaign-folders/68119a4ba1a314c79a0effd2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"campaign-folders",
+										"68119a4ba1a314c79a0effd2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 03:35:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"68119a4ba1a314c79a0effd2\",\n        \"name\": \"New Sample Folder\",\n        \"description\": \"Description for sample folder\",\n        \"created_at\": \"2025-04-30T03:34:35.177000Z\",\n        \"updated_at\": \"2025-04-30T03:34:35.177000Z\",\n        \"campaigns\": [\n            {\n                \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n                \"name\": \"Campaign test 1\",\n                \"account_id\": \"426614174002\",\n                \"updated_at\": \"2025-04-30T03:35:06.873000Z\",\n                \"created_at\": \"2025-04-30T03:35:06.873000Z\",\n                \"id\": \"68119a6aa1a314c79a0effd3\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Campaign Folder",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Folder\",\n  \"description\": \"update test\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/campaign-folders/6811912c982d03c16a0bb732",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaign-folders",
+								"6811912c982d03c16a0bb732"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Campaign Folder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaign-folders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaign-folders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaigns",
+			"item": [
+				{
+					"name": "List Campaigns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaigns",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaigns"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Campaigns",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/campaigns",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"campaigns"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 03:40:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n            \"name\": \"Campaign test 1\",\n            \"account_id\": \"426614174002\",\n            \"updated_at\": \"2025-04-30T03:35:06.873000Z\",\n            \"created_at\": \"2025-04-30T03:35:06.873000Z\",\n            \"id\": \"68119a6aa1a314c79a0effd3\"\n        },\n        {\n            \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n            \"name\": \"Campaign test 2\",\n            \"overview\": \"ov 2\",\n            \"context\": \"ct 2\",\n            \"objective\": \"ob 2\",\n            \"key_message\": \"km 1\",\n            \"sentiment\": \"neutral\",\n            \"account_id\": \"426614174002\",\n            \"updated_at\": \"2025-04-30T03:40:03.330000Z\",\n            \"created_at\": \"2025-04-30T03:40:03.330000Z\",\n            \"id\": \"68119b93a1a314c79a0effd4\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Campaign",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n    \"name\": \"Campaign test 2\",\n    \"overview\": \"ov 2\",\n    \"context\": \"ct 2\",\n    \"objective\": \"ob 2\",\n    \"key_message\": \"km 1\",\n    \"sentiment\": \"neutral\",\n    \"account_id\": \"426614174002\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/campaigns",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaigns"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Campaign",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n    \"name\": \"Campaign test 2\",\n    \"overview\": \"ov 2\",\n    \"context\": \"ct 2\",\n    \"objective\": \"ob 2\",\n    \"key_message\": \"km 1\",\n    \"sentiment\": \"neutral\",\n    \"account_id\": \"426614174002\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/campaigns",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"campaigns"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 03:40:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Campaign created successfully\",\n    \"data\": {\n        \"campaign_folder_id\": \"68119a4ba1a314c79a0effd2\",\n        \"name\": \"Campaign test 2\",\n        \"overview\": \"ov 2\",\n        \"context\": \"ct 2\",\n        \"objective\": \"ob 2\",\n        \"key_message\": \"km 1\",\n        \"sentiment\": \"neutral\",\n        \"account_id\": \"426614174002\",\n        \"updated_at\": \"2025-04-30T03:40:03.330000Z\",\n        \"created_at\": \"2025-04-30T03:40:03.330000Z\",\n        \"id\": \"68119b93a1a314c79a0effd4\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Campaign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaigns/68119a6aa1a314c79a0effd3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaigns",
+								"68119a6aa1a314c79a0effd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Campaign",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Updated Campaign\",\n  \"content\": \"Updated content\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/campaigns/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaigns",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Campaign",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/campaigns/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"campaigns",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Authenticated User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
